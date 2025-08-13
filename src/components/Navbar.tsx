@@ -32,25 +32,25 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
   return (
     <nav className={`relative z-50 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-6">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-white text-3xl font-bold">
+            <Link href="/" className="text-3xl font-bold text-white">
               Kig<span className="text-primary">lance</span>
               <span className="text-primary">{`/>`}</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item: NavItem) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                    isActiveLink(item.href) ? 'text-primary' : 'text-white hover:text-primary'
+                    isActiveLink(item.href) ? 'text-primary' : 'hover:text-primary text-white'
                   }`}
                 >
                   {item.name}
@@ -60,15 +60,15 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button size="lg">Get in touch</Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
               aria-expanded={isOpen}
               aria-label="Toggle main menu"
             >
@@ -110,14 +110,14 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-sm">
+        <div className="absolute top-20 right-5 lg:hidden">
+          <div className="space-y-1 bg-gray-900/95 px-2 pt-2 pb-3 backdrop-blur-sm sm:px-3">
             {navItems.map((item: NavItem) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                  isActiveLink(item.href) ? 'text-primary' : 'text-white hover:text-primary'
+                  isActiveLink(item.href) ? 'text-primary' : 'hover:text-primary text-white'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

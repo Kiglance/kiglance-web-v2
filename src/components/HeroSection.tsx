@@ -8,42 +8,42 @@ import FloatingElements from './FloatingElements';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Background Pattern/Texture */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-black"></div>
+    <div id="home" className="relative min-h-screen overflow-hidden bg-black">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-radial"></div>
 
       {/* Floating Decorative Elements */}
-      {/* <FloatingElements /> */}
+      <FloatingElements />
 
       {/* Navigation */}
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center pt-20 pb-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="pt-20 pb-16 text-center">
           {/* Main Heading */}
           <div className="space-y-4 leading-[103px]">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white">
+            <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl xl:text-8xl">
               Bringing Your
             </h1>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white xl:text-8xl font-bold">
-              Dream Into <span className="text-lime-400 italic">Reality</span>
+            <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+              Dream Into <span className="text-primary italic">Reality</span>
             </h1>
           </div>
 
           {/* Subtitle */}
-          <div className="mt-12 max-w-3xl mx-auto">
-            <p className="text-base sm:text-lg text-white leading-relaxed">
+          <div className="mx-auto mt-12 max-w-3xl">
+            <p className="text-neutral text-base leading-relaxed sm:text-lg">
               We increase revenue and ensure sustainable long-term growth
             </p>
-            <p className="text-base sm:text-lg text-white leading-relaxed mt-2">
+            <p className="text-neutral mt-2 text-base leading-relaxed sm:text-lg">
               for your business through powerful Webflow websites.
             </p>
           </div>
 
           {/* CTA Button */}
           <div className="mt-16">
-            <Button size="lg" className="text-lg px-10 py-4">
+            <Button size="lg" className="px-10 py-4 text-lg">
               Start Your Project
             </Button>
           </div>
@@ -52,9 +52,6 @@ const HeroSection: React.FC = () => {
         {/* Trusted Section */}
         {/* <TrustedSection /> */}
       </div>
-
-      {/* Additional Background Elements */}
-      {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div> */}
     </div>
   );
 };

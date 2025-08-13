@@ -15,30 +15,29 @@ const TrustedSection: React.FC = () => {
   ];
 
   return (
-    <div className="mt-20 mb-8">
+    <div className="mt-6 mb-8">
       {/* Trusted By Text */}
-      <div className="flex items-center justify-center mb-12">
-        <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gray-600"></div>
+      <div className="mb-12 flex items-center justify-center">
+        <div className="to-primary h-px flex-1 bg-gradient-to-r from-transparent"></div>
         <div className="px-6">
-          <p className="text-gray-400 text-sm font-medium tracking-wider uppercase">
+          <p className="text-sm font-semibold tracking-wider text-white uppercase">
             Trusted by Amazing Brands
           </p>
         </div>
-        <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gray-600"></div>
+        <div className="to-primary h-px flex-1 bg-gradient-to-l from-transparent"></div>
       </div>
 
       {/* Brand Logos */}
-      <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl py-6 px-8 border border-gray-700/50">
-        <div className="flex items-center justify-between space-x-8 overflow-x-auto">
+      <div className="rounded-2xl bg-[#222222] px-8 py-6 backdrop-blur-sm">
+        <div className="flex items-center justify-between space-x-8 overflow-x-auto overflow-y-hidden">
           {brands.map((brand, index) => (
-            <div
-              key={index}
-              className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300 flex-shrink-0 group"
-            >
-              <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
+            <div key={index} className="group flex flex-shrink-0 items-center space-x-3">
+              <span className="text-2xl transition-transform duration-300 group-hover:scale-110">
                 {brand.icon}
               </span>
-              <span className="font-medium text-lg whitespace-nowrap">{brand.name}</span>
+              <span className="text-lg font-medium whitespace-nowrap text-[#CDD0D8] transition-colors duration-300 hover:text-white">
+                {brand.name}
+              </span>
             </div>
           ))}
         </div>
