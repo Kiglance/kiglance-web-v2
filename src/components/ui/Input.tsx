@@ -9,7 +9,7 @@ interface InputProps {
   error?: string;
 }
 
-export const Input: React.FC<InputProps> = ({
+export const Input = ({
   label,
   name,
   type = 'text',
@@ -18,7 +18,7 @@ export const Input: React.FC<InputProps> = ({
   value,
   onChange,
   error,
-}) => {
+}: InputProps) => {
   const baseInputClasses =
     'w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-lime-400 focus:outline-none transition-colors duration-200';
 

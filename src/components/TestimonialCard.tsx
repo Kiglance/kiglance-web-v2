@@ -10,11 +10,11 @@ interface TestimonialCardProps {
   testimonial: Testimonial;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
+const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     <div className="mx-auto max-w-4xl px-4 text-center">
       <blockquote className="mb-12 text-2xl leading-relaxed font-light text-white italic md:text-3xl lg:text-4xl">
-        "{testimonial.quote}"
+        &quot;{testimonial.quote}&quot;
       </blockquote>
 
       <div className="space-y-2">

@@ -1,7 +1,9 @@
-const CustomSlider: React.FC<{ children: React.ReactNode[]; currentSlide: number }> = ({
-  children,
-  currentSlide,
-}) => {
+interface CustomSliderProps {
+  children: React.ReactNode[];
+  currentSlide: number;
+}
+
+const CustomSlider = ({ children, currentSlide }: CustomSliderProps) => {
   return (
     <div className="relative overflow-hidden">
       <div

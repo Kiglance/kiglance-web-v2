@@ -4,7 +4,7 @@ interface ContactItemProps {
   icon: LucideIcon;
   text: string;
   href?: string;
-  type?: 'address' | 'email' | 'phone';
+  type?: 'address' | 'email' | 'phone' | 'text';
 }
 
 interface SocialIconProps {
@@ -12,7 +12,7 @@ interface SocialIconProps {
   href: string;
 }
 
-export const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, text, type = 'text' }) => {
+export const ContactItem = ({ icon: Icon, text, type = 'text' }: ContactItemProps) => {
   const getHref = (): string => {
     switch (type) {
       case 'email':
@@ -43,7 +43,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, text, type
   );
 };
 
-export const SocialIcon: React.FC<SocialIconProps> = ({ icon: Icon, href }) => {
+export const SocialIcon = ({ icon: Icon, href }: SocialIconProps) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group relative">
       <div
