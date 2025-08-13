@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="pt-20 pb-16 text-center">
           {/* Main Heading */}
           <div className="space-y-4 leading-[103px]">
