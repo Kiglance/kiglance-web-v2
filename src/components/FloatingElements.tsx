@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
 const FloatingElements: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const FloatingElements: React.FC = () => {
       {/* Bottom left small star */}
       <div
         className="absolute bottom-40 left-20 text-lime-400 opacity-40 animate-pulse"
-        style={{ animationDelay: "1s" }}
+        style={{ animationDelay: '1s' }}
       >
         <svg
           width="24"
@@ -31,7 +31,7 @@ const FloatingElements: React.FC = () => {
       {/* Bottom right small star */}
       <div
         className="absolute bottom-32 right-48 text-lime-400 opacity-30 animate-pulse"
-        style={{ animationDelay: "2s" }}
+        style={{ animationDelay: '2s' }}
       >
         <svg
           width="20"
@@ -50,14 +50,14 @@ const FloatingElements: React.FC = () => {
       {/* Additional decorative elements */}
       <div
         className="absolute top-48 left-40 text-lime-400 opacity-20 animate-bounce"
-        style={{ animationDelay: "0.5s", animationDuration: "3s" }}
+        style={{ animationDelay: '0.5s', animationDuration: '3s' }}
       >
         <div className="w-2 h-2 bg-current rounded-full"></div>
       </div>
 
       <div
         className="absolute bottom-56 right-20 text-lime-400 opacity-25 animate-bounce"
-        style={{ animationDelay: "1.5s", animationDuration: "4s" }}
+        style={{ animationDelay: '1.5s', animationDuration: '4s' }}
       >
         <div className="w-1 h-1 bg-current rounded-full"></div>
       </div>

@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React from "react";
-import Navbar from "./Navbar";
-import Button from "./ui/Button";
-import TrustedSection from "./TrustedSection";
-import FloatingElements from "./FloatingElements";
+import React from 'react';
+import Navbar from './Navbar';
+import Button from './ui/Button';
+import TrustedSection from './TrustedSection';
+import FloatingElements from './FloatingElements';
 
 const HeroSection: React.FC = () => {
   return (

@@ -1,13 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Colors */
-  --color-primary: #B9FD50;
+  --color-primary: #b9fd50;
   --color-background: #111204;
   --color-background-1: #111204;
-  --color-background-2: #1E1E1E;
-  --color-background-3: #F8F8F8;
-  --color-neutral: #A6A6A6;
+  --color-background-2: #1e1e1e;
+  --color-background-3: #f8f8f8;
+  --color-neutral: #a6a6a6;
   --color-neutral-1: #272727;
   --color-neutral-2: #404040;
   --color-neutral-3: #595959;
@@ -28,49 +28,49 @@
   /* Font Sizes */
   --font-size-tiny: 0.625rem;
   --font-size-tiny--line-height: 1rem;
-  
+
   --font-size-xxs: 0.6875rem;
   --font-size-xxs--line-height: 1.125rem;
-  
+
   --font-size-xs: 0.75rem;
   --font-size-xs--line-height: 1.125rem;
-  
+
   --font-size-xs-plus: 0.8125rem;
   --font-size-xs-plus--line-height: 1.1875rem;
-  
+
   --font-size-sm: 0.875rem;
   --font-size-sm--line-height: 1.25rem;
-  
+
   --font-size-sm-plus: 0.9375rem;
   --font-size-sm-plus--line-height: 1.3125rem;
-  
+
   --font-size-base: 1rem;
   --font-size-base--line-height: 1.5rem;
-  
+
   --font-size-base-plus: 1.0625rem;
   --font-size-base-plus--line-height: 1.5625rem;
-  
+
   --font-size-lg: 1.125rem;
   --font-size-lg--line-height: 1.75rem;
-  
+
   --font-size-lg-plus: 1.1875rem;
   --font-size-lg-plus--line-height: 1.8125rem;
-  
+
   --font-size-xl: 1.25rem;
   --font-size-xl--line-height: 2rem;
-  
+
   --font-size-xl-plus: 1.3125rem;
   --font-size-xl-plus--line-height: 1.9375rem;
-  
+
   --font-size-2xl-plus: 1.375rem;
   --font-size-2xl-plus--line-height: 2.125rem;
-  
+
   --font-size-2xl: 1.5rem;
   --font-size-2xl--line-height: 2.25rem;
-  
+
   --font-size-3xl: 1.875rem;
   --font-size-3xl--line-height: 2.5rem;
-  
+
   --font-size-3xl-plus: 1.75rem;
   --font-size-3xl-plus--line-height: 2.5rem;
 }

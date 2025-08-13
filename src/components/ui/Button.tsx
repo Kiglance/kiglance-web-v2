@@ -1,35 +1,35 @@
-import React from "react";
+import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
-  size?: "sm" | "md" | "lg";
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
   loading?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  variant = "primary",
-  size = "md",
-  className = "",
+  variant = 'primary',
+  size = 'md',
+  className = '',
   loading = false,
   disabled,
   ...props
 }) => {
   const baseClasses =
-    "cursor-pointer font-medium rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed";
+    'cursor-pointer font-medium rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed';
 
-  const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
-    primary: "bg-primary hover:bg-lime-300 text-black ",
+  const variants: Record<NonNullable<ButtonProps['variant']>, string> = {
+    primary: 'bg-primary hover:bg-lime-300 text-black ',
     secondary:
-      "bg-transparent border border-primary text-primary hover:bg-primary hover:text-black ",
+      'bg-transparent border border-primary text-primary hover:bg-primary hover:text-black ',
   };
 
-  const sizes: Record<NonNullable<ButtonProps["size"]>, string> = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
+  const sizes: Record<NonNullable<ButtonProps['size']>, string> = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
   };
 
   const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Link from "next/link";
-import Button from "./ui/Button";
-import { usePathname } from "next/navigation";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Button from './ui/Button';
+import { usePathname } from 'next/navigation';
 
 interface NavItem {
   name: string;
@@ -14,16 +14,16 @@ interface NavbarProps {
   className?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
+const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const pathname = usePathname();
 
   const navItems: NavItem[] = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Works", href: "/works" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Contact us", href: "/contact" },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Works', href: '/works' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Contact us', href: '/contact' },
   ];
 
   const isActiveLink = (href: string): boolean => {
@@ -51,8 +51,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                   href={item.href}
                   className={`px-3 py-2 text-base font-medium transition-colors duration-300 ${
                     isActiveLink(item.href)
-                      ? "text-primary"
-                      : "text-white hover:text-primary"
+                      ? 'text-primary'
+                      : 'text-white hover:text-primary'
                   }`}
                 >
                   {item.name}
@@ -120,8 +120,8 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
                 href={item.href}
                 className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
                   isActiveLink(item.href)
-                    ? "text-primary"
-                    : "text-white hover:text-primary"
+                    ? 'text-primary'
+                    : 'text-white hover:text-primary'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

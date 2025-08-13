@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface Brand {
   name: string;
@@ -7,11 +7,11 @@ interface Brand {
 
 const TrustedSection: React.FC = () => {
   const brands: Brand[] = [
-    { name: "Layers", icon: "🌟" },
-    { name: "Quotient", icon: "💬" },
-    { name: "Circooles", icon: "🔵" },
-    { name: "Hourglass", icon: "⏳" },
-    { name: "Command+R", icon: "⌘" },
+    { name: 'Layers', icon: '🌟' },
+    { name: 'Quotient', icon: '💬' },
+    { name: 'Circooles', icon: '🔵' },
+    { name: 'Hourglass', icon: '⏳' },
+    { name: 'Command+R', icon: '⌘' },
   ];
 
   return (
