@@ -1,4 +1,5 @@
 import FeaturedProjects from '@/components/FeaturedProjects';
+import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <FeaturedProjects />
+      <Footer />
     </main>
   );
 }

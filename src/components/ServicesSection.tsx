@@ -1,5 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import { SectionHeader } from './SectionHeader';
 
 interface Service {
   id: number;
@@ -68,16 +69,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = '' }) => 
   return (
     <section className={`bg-background-2 relative overflow-hidden py-10 lg:py-16 ${className}`}>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-10 text-center md:mb-16">
-          <div className="mb-4 inline-block">
-            <p className="text-primary text-sm uppercase md:text-base">What We Offer</p>
-          </div>
-          <h2 className="text-3xl leading-tight font-semibold text-white sm:text-4xl md:text-5xl xl:text-6xl">
-            We can help you with...
-          </h2>
-        </div>
-
+        <SectionHeader title="What We Offer" subTitle="We can help you with..." />
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service: Service, index: number) => (
