@@ -50,9 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                   key={item.name}
                   href={item.href}
                   className={`px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                    isActiveLink(item.href)
-                      ? 'text-primary'
-                      : 'text-white hover:text-primary'
+                    isActiveLink(item.href) ? 'text-primary' : 'text-white hover:text-primary'
                   }`}
                 >
                   {item.name}
@@ -119,9 +117,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                 key={item.name}
                 href={item.href}
                 className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                  isActiveLink(item.href)
-                    ? 'text-primary'
-                    : 'text-white hover:text-primary'
+                  isActiveLink(item.href) ? 'text-primary' : 'text-white hover:text-primary'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

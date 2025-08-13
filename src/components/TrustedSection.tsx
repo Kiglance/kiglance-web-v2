@@ -38,9 +38,7 @@ const TrustedSection: React.FC = () => {
               <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
                 {brand.icon}
               </span>
-              <span className="font-medium text-lg whitespace-nowrap">
-                {brand.name}
-              </span>
+              <span className="font-medium text-lg whitespace-nowrap">{brand.name}</span>
             </div>
           ))}
         </div>
