@@ -69,9 +69,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = '' }) => 
     <section className={`bg-background-2 relative overflow-hidden py-10 lg:py-16 ${className}`}>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-8 text-center md:mb-10">
+        <div className="mb-10 text-center md:mb-16">
           <div className="mb-4 inline-block">
-            <p className="text-primary text-base uppercase">What We Offer</p>
+            <p className="text-primary text-sm uppercase md:text-base">What We Offer</p>
           </div>
           <h2 className="text-3xl leading-tight font-semibold text-white sm:text-4xl md:text-5xl xl:text-6xl">
             We can help you with...
