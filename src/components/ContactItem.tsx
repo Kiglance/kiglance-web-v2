@@ -4,7 +4,7 @@ interface ContactItemProps {
   icon: LucideIcon;
   text: string;
   href?: string;
-  type?: 'link' | 'email' | 'phone';
+  type?: 'address' | 'email' | 'phone';
 }
 
 interface SocialIconProps {
@@ -12,38 +12,34 @@ interface SocialIconProps {
   href: string;
 }
 
-export const ContactItem: React.FC<ContactItemProps> = ({
-  icon: Icon,
-  text,
-  href,
-  type = 'link',
-}) => {
-  const baseClasses =
-    'flex items-center gap-3 text-gray-300 hover:text-primary transition-colors duration-200';
-
-  if (type === 'email') {
-    return (
-      <a href={`mailto:${text}`} className={baseClasses}>
-        <Icon size={18} />
-        <span>{text}</span>
-      </a>
-    );
-  }
-
-  if (type === 'phone') {
-    return (
-      <a href={`tel:${text}`} className={baseClasses}>
-        <Icon size={18} />
-        <span>{text}</span>
-      </a>
-    );
-  }
+export const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, text, type = 'text' }) => {
+  const getHref = (): string => {
+    switch (type) {
+      case 'email':
+        return `mailto:${text}`;
+      case 'phone':
+        return `tel:${text}`;
+      case 'address':
+        return `https://maps.google.com/?q=${encodeURIComponent(text)}`;
+      default:
+        return '#';
+    }
+  };
 
   return (
-    <a href={href} className={baseClasses} target="_blank" rel="noopener noreferrer">
-      <Icon size={18} />
-      <span>{text}</span>
-    </a>
+    <div className="flex items-start gap-4">
+      <div className="mt-1">
+        <Icon size={20} className="text-primary" />
+      </div>
+      <a
+        href={getHref()}
+        className="hover:text-primary text-gray-300 transition-colors duration-200"
+        target={type === 'address' ? '_blank' : undefined}
+        rel={type === 'address' ? 'noopener noreferrer' : undefined}
+      >
+        {text}
+      </a>
+    </div>
   );
 };
 

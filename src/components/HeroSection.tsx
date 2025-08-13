@@ -8,7 +8,7 @@ import FloatingElements from './FloatingElements';
 
 const HeroSection: React.FC = () => {
   return (
-    <div id="home" className="4xl:min-h-auto relative min-h-screen overflow-hidden bg-black">
+    <div id="home" className="4xl:min-h-auto bg-background relative min-h-screen overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-radial"></div>
 

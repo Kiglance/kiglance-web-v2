@@ -34,10 +34,10 @@ const Footer: React.FC = () => {
 
   const navigationLinks: NavigationLink[] = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
     { href: '/services', label: 'Services' },
     { href: '/works', label: 'Works' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/testimonials', label: 'Testimonials' },
+    { href: '/contact', label: 'Contact us' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string): void => {
@@ -47,9 +47,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-background">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:px-0">
         {/* Main Footer  */}
-        <div className="py-16">
+        <div className="py-10">
           <div className="flex flex-col gap-y-6 md:flex-row md:items-start md:justify-between">
             {/* Left Side */}
             <div className="space-y-6">
