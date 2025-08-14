@@ -1,10 +1,8 @@
 'use client';
 
 import React from 'react';
-import Navbar from './Navbar';
-import Button from './ui/Button';
-import TrustedSection from './TrustedSection';
 import FloatingElements from './FloatingElements';
+import Button from './ui/Button';
 
 const HeroSection: React.FC = () => {
   return (
@@ -14,9 +12,6 @@ const HeroSection: React.FC = () => {
 
       {/* Floating Decorative Elements */}
       <FloatingElements />
-
-      {/* Navigation */}
-      <Navbar />
 
       {/* Hero Content */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

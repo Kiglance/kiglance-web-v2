@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Button from './ui/Button';
+import { useRouter } from 'next/navigation';
 
 interface ProjectCardProps {
   title: string;
@@ -11,6 +14,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, image, technologies }: ProjectCardProps) => {
+  const route = useRouter();
   return (
     <div className="group relative overflow-hidden rounded-2xl bg-[#2D2D2D] transition-all duration-500 hover:scale-105 hover:transform">
       {/* Project Image */}
@@ -27,7 +31,10 @@ const ProjectCard = ({ title, description, image, technologies }: ProjectCardPro
             />
           </Button>
 
-          <Button className="group/action-2 flex items-center gap-1">
+          <Button
+            onClick={() => route.push(`/works/${title}`)}
+            className="group/action-2 flex items-center gap-1"
+          >
             Read case Study
             <ArrowRight
               size={16}
