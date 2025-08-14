@@ -15,10 +15,10 @@ const ProjectCard = ({ title, description, image, technologies }: ProjectCardPro
     <div className="group relative overflow-hidden rounded-2xl bg-[#2D2D2D] transition-all duration-500 hover:scale-105 hover:transform">
       {/* Project Image */}
       <div className="relative h-64 w-full overflow-hidden">
-        <Image src={image} alt="featured-project" fill className="absolute inset-0" />
+        <Image src={image} alt="featured-project" fill className="absolute inset-0 object-cover" />
 
         {/* Action Buttons - Show on Hover */}
-        <div className="inset-0 hidden flex-col items-center justify-center gap-4 bg-[#090909] opacity-90 transition-all delay-300 duration-300 group-hover:absolute group-hover:flex">
+        <div className="inset-0 hidden flex-col items-center justify-center gap-4 bg-[#090909] opacity-90 transition-all duration-300 group-hover:absolute group-hover:flex">
           <Button variant="secondary" className="group/action-1 flex items-center gap-1">
             Live Website
             <ExternalLink

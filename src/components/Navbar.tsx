@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   ];
 
   const isActiveLink = (href: string): boolean => {
-    return pathname.includes(href);
+    return pathname === href;
   };
 
   return (
