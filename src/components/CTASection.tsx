@@ -21,7 +21,7 @@ const CTASection = () => {
         <Button size="md" className="group inline-flex items-center gap-3">
           Get in Touch
           <div className="flex h-6 w-6 items-center justify-center rounded-full bg-black transition-transform duration-200 group-hover:translate-x-1">
-            <ArrowRight size={14} className="text-[#b9fd50]" />
+            <ArrowRight size={14} className="text-primary" />
           </div>
         </Button>
       </div>

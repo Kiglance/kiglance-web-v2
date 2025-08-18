@@ -2,7 +2,7 @@
 
 @theme {
   /* Colors */
-  --color-primary: #b9fd50;
+  --color-primary: #25d366;
   --color-background: #000;
   --color-background-1: #111204;
   --color-background-2: #1e1e1e;
@@ -98,9 +98,15 @@ body {
 }
 
 .bg-radial {
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgba(185, 253, 80, 0.3) 0%,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0) 45%
+  ); */
+  background: radial-gradient(
+    circle,
+    rgba(37, 211, 102, 0.3) 0%,
     rgba(0, 0, 0, 0) 45%,
     rgba(0, 0, 0, 0) 45%
   );

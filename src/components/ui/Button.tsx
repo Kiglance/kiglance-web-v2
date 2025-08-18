@@ -21,9 +21,9 @@ const Button: React.FC<ButtonProps> = ({
     'cursor-pointer font-medium rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variants: Record<NonNullable<ButtonProps['variant']>, string> = {
-    primary: 'bg-primary hover:bg-lime-300 text-black ',
+    primary: 'bg-primary hover:bg-[#3ee489] text-black',
     secondary:
-      'bg-transparent border border-primary text-primary hover:bg-primary hover:text-black ',
+      'bg-transparent border border-primary text-primary hover:bg-[#3ee489] hover:text-black ',
   };
 
   const sizes: Record<NonNullable<ButtonProps['size']>, string> = {

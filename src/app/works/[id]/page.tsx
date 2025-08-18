@@ -68,14 +68,14 @@ const page = () => {
               <div>
                 <h1 className="mb-8 text-4xl font-bold text-white lg:text-5xl">Project Overview</h1>
                 <p className="mb-8 text-sm leading-relaxed text-white lg:text-base">
-                  Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem
+                  {`Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem
                   Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An
                   Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen
                   Book. It Has Survived Not Only Five Centuries, But Also The Leap Into Electronic
                   Typesetting, Remaining Essentially Unchanged. It Was Popularised In The 1960s With
                   The Release Of Letraset Sheets Containing Lorem Ipsum Passages, And More Recently
                   With Desktop Publishing Software Like Aldus PageMaker Including Versions Of Lorem
-                  Ipsum.
+                  Ipsum.`}
                 </p>
 
                 {/* Tech Stack */}

@@ -20,12 +20,12 @@ export const Input = ({
   error,
 }: InputProps) => {
   const baseInputClasses =
-    'w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-lime-400 focus:outline-none transition-colors duration-200';
+    'w-full px-4 py-3 bg-transparent border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-primary focus:outline-none transition-colors duration-200';
 
   return (
     <div className="space-y-2">
       <label htmlFor={name} className="block font-medium text-white">
-        {label} {required && <span className="text-lime-400">*</span>}
+        {label} {required && <span className="text-primary">*</span>}
       </label>
       {type === 'textarea' ? (
         <textarea
