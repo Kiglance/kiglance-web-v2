@@ -38,36 +38,40 @@ const page = () => {
   ];
   return (
     <>
-      <div className="bg-background relative overflow-hidden">
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="pb-16 text-center">
-            <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-              Featured Works
-            </h1>
-            <p className="text-neutral mx-auto mt-2 max-w-3xl px-4 text-sm leading-relaxed sm:text-base lg:text-lg">
-              Explore our portfolio of results-driven digital solutions that combine thoughtful
-              design with robust development.
-            </p>
-          </div>
-          <div className="rounded-2xl bg-[#222222] px-4 py-6 sm:px-8 sm:py-5 md:px-12 lg:px-14">
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-              {infoStatics.map((item, idx) => {
-                return (
-                  <div key={idx} className="flex-1 text-center">
-                    <p className="text-primary text-3xl font-semibold sm:text-4xl lg:text-5xl">
-                      {item.value}
-                      <span>{item.type === 'number' ? '+' : '%'}</span>
-                    </p>
-                    <p className="mt-1 text-sm text-white sm:text-base lg:text-lg">{item.label}</p>
-                  </div>
-                );
-              })}
+      <div className="relative overflow-hidden">
+        <div className="dark:bg-background bg-background-light">
+          <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="pb-16 text-center">
+              <h1 className="text-neutral-1-light text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl dark:text-white">
+                Featured Works
+              </h1>
+              <p className="text-neutral mx-auto mt-2 max-w-3xl px-4 text-sm leading-relaxed sm:text-base lg:text-lg">
+                Explore our portfolio of results-driven digital solutions that combine thoughtful
+                design with robust development.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-[#e2e1e1] px-4 py-6 sm:px-8 sm:py-5 md:px-12 lg:px-14 dark:bg-[#222222]">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                {infoStatics.map((item, idx) => {
+                  return (
+                    <div key={idx} className="flex-1 text-center">
+                      <p className="text-primary text-3xl font-semibold sm:text-4xl lg:text-5xl">
+                        {item.value}
+                        <span>{item.type === 'number' ? '+' : '%'}</span>
+                      </p>
+                      <p className="text-neutral-1-light mt-1 text-sm sm:text-base lg:text-lg dark:text-white">
+                        {item.label}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <section className="bg-background-2 4xl:min-h-auto min-h-screen px-4 py-20 sm:px-6 lg:px-8">
+      <section className="dark:bg-background-2 4xl:min-h-auto min-h-screen bg-[#e2e1e1] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader title="OUR WORK" subTitle="Portfolio  Project" />
           {/* Projects Grid */}

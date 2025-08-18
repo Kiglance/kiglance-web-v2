@@ -59,15 +59,17 @@ const page = () => {
       </div>
 
       {/* Project Overview page */}
-      <div className="bg-black p-8 lg:p-16">
+      <div className="bg-background-light p-8 lg:p-16 dark:bg-black">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Left Column */}
             <div className="space-y-12">
               {/* Project Overview */}
               <div>
-                <h1 className="mb-8 text-4xl font-bold text-white lg:text-5xl">Project Overview</h1>
-                <p className="mb-8 text-sm leading-relaxed text-white lg:text-base">
+                <h1 className="text-neutral-1-light mb-8 text-4xl font-bold lg:text-5xl dark:text-white">
+                  Project Overview
+                </h1>
+                <p className="text-neutral-1-light mb-8 text-sm leading-relaxed lg:text-base dark:text-white">
                   {`Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem
                   Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An
                   Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen
@@ -93,14 +95,18 @@ const page = () => {
 
               {/* Client */}
               <div>
-                <h2 className="mb-4 text-2xl font-bold text-white lg:text-3xl">Client</h2>
-                <p className="text-lg text-white">Paul & Darko, Nexgen</p>
+                <h2 className="text-neutral-1-light mb-4 text-2xl font-bold lg:text-3xl dark:text-white">
+                  Client
+                </h2>
+                <p className="text-neutral-1-light text-lg dark:text-white">Paul & Darko, Nexgen</p>
               </div>
 
               {/* Duration */}
               <div>
-                <h2 className="mb-4 text-2xl font-bold text-white lg:text-3xl">Duration</h2>
-                <p className="text-lg text-white">1 Month</p>
+                <h2 className="text-neutral-1-light mb-4 text-2xl font-bold lg:text-3xl dark:text-white">
+                  Duration
+                </h2>
+                <p className="text-neutral-1-light text-lg dark:text-white">1 Month</p>
               </div>
             </div>
 
@@ -123,7 +129,9 @@ const page = () => {
 
               {/* Services */}
               <div>
-                <h2 className="mb-8 text-2xl font-bold text-white lg:text-3xl">Services</h2>
+                <h2 className="text-neutral-1-light mb-8 text-2xl font-bold lg:text-3xl dark:text-white">
+                  Services
+                </h2>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {services.map((service, index) => (
                     <div
@@ -141,7 +149,7 @@ const page = () => {
       </div>
 
       {/* TestimonialSection */}
-      <div className="bg-background-2 flex items-center justify-center p-8">
+      <div className="dark:bg-background-2 flex items-center justify-center bg-[#e2e1e1] p-8">
         <div className="mx-auto max-w-6xl">
           <SectionHeader title="TESTIMONIAL" subTitle="Customer is Our Top Priority" />
 

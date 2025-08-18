@@ -16,7 +16,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, image, technologies }: ProjectCardProps) => {
   const route = useRouter();
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-[#2D2D2D] transition-all duration-500 hover:scale-105 hover:transform">
+    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:scale-105 hover:transform dark:bg-[#2D2D2D]">
       {/* Project Image */}
       <div className="relative h-64 w-full overflow-hidden">
         <Image src={image} alt="featured-project" fill className="absolute inset-0 object-cover" />
@@ -46,7 +46,7 @@ const ProjectCard = ({ title, description, image, technologies }: ProjectCardPro
 
       {/* Project Content */}
       <div className="p-6">
-        <h3 className="mb-3 text-xl font-bold text-white">{title}</h3>
+        <h3 className="text-neutral-1-light mb-3 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-neutral mb-6 text-sm leading-relaxed">{description}</p>
 
         {/* Technologies */}

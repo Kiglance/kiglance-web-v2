@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div className={`group cursor-pointer ${className} h-full`}>
-      <div className="border-primary/8 h-full border p-8">
+      <div className="border-primary/9 h-full border p-8">
         {/* Icon */}
         <div className="justify-left mb-8 flex">
           <Image src={`/icons/${icon}.svg`} alt={icon} width={40} height={40} />
@@ -26,13 +26,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
         {/* Number and Title */}
         <div className="mb-6 text-left">
-          <h3 className="mb-2 text-2xl font-bold text-white">
+          <h3 className="text-neutral-1-light mb-2 text-2xl font-bold dark:text-white">
             <span>{number}.</span> {title}
           </h3>
         </div>
 
         {/* Description */}
-        <p className="text-left text-sm text-[#9593A4] md:text-base">{description}</p>
+        <p className="text-left text-sm text-[#6B7280] md:text-base dark:text-[#9593A4]">
+          {description}
+        </p>
       </div>
     </div>
   );

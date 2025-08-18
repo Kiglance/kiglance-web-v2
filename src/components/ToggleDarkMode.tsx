@@ -1,36 +1,19 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 function ToggleDarkMode() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+  const { theme, setTheme } = useTheme();
+  const isDarkMode = theme === 'dark';
 
-  // Initialize dark mode from localStorage on component mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === 'dark');
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else {
-      setIsDarkMode(prefersDark);
-      document.documentElement.classList.toggle('dark', prefersDark);
-    }
-  }, []);
-
-  // Toggle dark mode function
-  const toggleDarkMode = () => {
-    const newDarkMode = !isDarkMode;
-    setIsDarkMode(newDarkMode);
-    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', newDarkMode);
+  const toggleTheme = () => {
+    setTheme(isDarkMode ? 'light' : 'dark');
   };
 
   return (
     <button
-      onClick={toggleDarkMode}
-      className="focus:ring-primary relative inline-flex h-6 w-12 items-center justify-center rounded-full bg-gray-700 transition-colors duration-300 hover:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:outline-none"
+      onClick={toggleTheme}
+      className="focus:ring-primary relative inline-flex h-6 w-12 items-center justify-center rounded-full bg-[#e2e1e1] transition-colors duration-300 hover:bg-gray-600 focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-400 focus:outline-none dark:bg-gray-700"
       aria-label="Toggle dark mode"
     >
       <div

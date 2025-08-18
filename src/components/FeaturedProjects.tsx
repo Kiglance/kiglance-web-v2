@@ -8,7 +8,7 @@ import { projects } from '../../data/static';
 
 const FeaturedProjects = () => {
   return (
-    <section className="bg-background 4xl:min-h-auto min-h-screen px-4 py-20 sm:px-6 lg:px-8">
+    <section className="dark:bg-background 4xl:min-h-auto bg-background-light min-h-screen px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeader title="OUR WORK" subTitle="Featured Projects" />
         {/* Projects Grid */}

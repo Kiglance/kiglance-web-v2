@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   title: 'Kiglance',
@@ -13,10 +14,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="text-neutral-1 h-full w-full">
-        <Navbar />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="text-neutral-1-light dark:text-neutral-1 h-full w-full">
+            <Navbar />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

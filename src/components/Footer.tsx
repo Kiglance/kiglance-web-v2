@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-background">
+    <footer className="dark:bg-background bg-[#1A202C]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:px-0">
         {/* Main Footer  */}
         <div className="py-10">

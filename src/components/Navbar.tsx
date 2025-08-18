@@ -32,12 +32,12 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   };
 
   return (
-    <nav className={`sticky top-0 z-50 ${className}bg-background`}>
+    <nav className={`sticky top-0 z-50 ${className} bg-background-light dark:bg-background`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-3xl font-bold text-white">
+            <Link href="/" className="text-neutral-1-light text-3xl font-bold dark:text-white">
               Kig<span className="text-primary">lance</span>
               <span className="text-primary">{`/>`}</span>
             </Link>
@@ -51,7 +51,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
                   key={item.name}
                   href={item.href}
                   className={`px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                    isActiveLink(item.href) ? 'text-primary' : 'hover:text-primary text-white'
+                    isActiveLink(item.href)
+                      ? 'text-primary'
+                      : 'hover:text-primary text-neutral-1-light dark:text-white'
                   }`}
                 >
                   {item.name}

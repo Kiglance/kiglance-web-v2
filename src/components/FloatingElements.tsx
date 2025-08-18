@@ -5,7 +5,7 @@ const FloatingElements: React.FC = () => {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {/* Top right star */}
-      <div className="absolute top-44 right-[350px] animate-pulse opacity-80">
+      <div className="absolute top-24 right-[350px] animate-pulse opacity-80">
         <Image src="/icons/Star.svg" width={112} height={112} alt="star" />
       </div>
 

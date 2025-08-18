@@ -6,7 +6,10 @@ import Button from './ui/Button';
 
 const HeroSection: React.FC = () => {
   return (
-    <div id="home" className="4xl:min-h-auto bg-background relative min-h-screen overflow-hidden">
+    <div
+      id="home"
+      className="4xl:min-h-auto bg-background-light dark:bg-background relative min-h-screen overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-radial"></div>
 
@@ -14,14 +17,14 @@ const HeroSection: React.FC = () => {
       <FloatingElements />
 
       {/* Hero Content */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="pt-20 pb-16 text-center">
+      <div className="4xl:min-h-auto relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="4xl:pt-20 4xl:pb-16 text-center">
           {/* Main Heading */}
           <div className="space-y-4 leading-[103px]">
-            <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="text-neutral-1-light text-5xl font-bold sm:text-6xl lg:text-7xl xl:text-8xl dark:text-white">
               Bringing Your
             </h1>
-            <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="text-neutral-1-light text-5xl font-bold sm:text-6xl lg:text-7xl xl:text-8xl dark:text-white">
               Dream Into <span className="text-primary italic">Reality</span>
             </h1>
           </div>
@@ -43,9 +46,6 @@ const HeroSection: React.FC = () => {
             </Button>
           </div>
         </div>
-
-        {/* Trusted Section */}
-        {/* <TrustedSection /> */}
       </div>
     </div>
   );

@@ -98,13 +98,20 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-background px-4 py-20 sm:px-6 lg:px-8">
+    <section className="dark:bg-background bg-[#1A202C] px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader
-          title="CONTACT US"
-          subTitle="Get in touch"
-          description={`Have a project in mind? We'd love to hear from you`}
-        />
+        <div className="mb-10 space-y-4 text-center md:mb-16">
+          <div className="inline-block">
+            <p className="text-primary text-sm uppercase md:text-base">CONTACT US</p>
+          </div>
+          <h2 className="text-3xl leading-tight font-semibold text-white sm:text-4xl md:text-5xl xl:text-6xl">
+            Get in touch
+          </h2>
+
+          <p className="text-center text-xs text-white md:text-sm">
+            Have a project in mind? We'd love to hear from you
+          </p>
+        </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
