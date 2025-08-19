@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 
 function ToggleDarkMode() {
   const { theme, setTheme } = useTheme();
-  const isDarkMode = theme === 'dark';
+  const isDarkMode = theme !== 'light';
 
   const toggleTheme = () => {
     setTheme(isDarkMode ? 'light' : 'dark');

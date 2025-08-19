@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MapPin, Mail, Phone, Github, Linkedin } from 'lucide-react';
 import { ContactItem, SocialIcon } from './ContactItem';
 import { UpworkIcon } from './ui/UpworkIcon';
 import { Input } from './ui/Input';
 import Button from './ui/Button';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   fullName: string;
@@ -23,6 +24,8 @@ interface FormErrors {
 
 // Main ContactSection Component
 const ContactSection: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
+
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
@@ -66,20 +69,30 @@ const ContactSection: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) return;
-
     setIsSubmitting(true);
-
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Handle success
-      console.log('Form submitted:', formData);
-      alert('Message sent successfully!');
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          form.current!,
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+          },
+        )
+        .then(
+          () => {
+            alert('Message sent successfully!');
+          },
+          (error) => {
+            console.log(error, 'Error:');
+            alert(`${error.text}`);
+          },
+        );
 
       // Reset form
       setFormData({
@@ -143,7 +156,7 @@ const ContactSection: React.FC = () => {
 
           {/* Right Side - Contact Form */}
           <div>
-            <div className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <Input
@@ -191,10 +204,15 @@ const ContactSection: React.FC = () => {
               />
 
               {/* Submit Button */}
-              <Button onClick={handleSubmit} disabled={isSubmitting} className="w-full">
+              <Button
+                type="submit"
+                loading={isSubmitting}
+                disabled={isSubmitting}
+                className="w-full"
+              >
                 {isSubmitting ? 'Sending Message...' : 'Send Message'}
               </Button>
-            </div>
+            </form>
           </div>
         </div>
 
