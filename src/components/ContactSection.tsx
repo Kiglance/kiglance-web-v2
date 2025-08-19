@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { MapPin, Mail, Phone, Github, Linkedin } from 'lucide-react';
 import { ContactItem, SocialIcon } from './ContactItem';
-import { SectionHeader } from './SectionHeader';
 import { UpworkIcon } from './ui/UpworkIcon';
 import { Input } from './ui/Input';
 import Button from './ui/Button';
@@ -98,7 +97,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="dark:bg-background bg-[#1A202C] px-4 py-20 sm:px-6 lg:px-8">
+    <section id="contact" className="dark:bg-background bg-[#1A202C] px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 space-y-4 text-center md:mb-16">
           <div className="inline-block">

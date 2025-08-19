@@ -68,6 +68,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ className = '' }) => 
 
   return (
     <section
+      id="services"
       className={`dark:bg-background-2 relative overflow-hidden bg-[#e2e1e1] py-10 lg:py-16 ${className}`}
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

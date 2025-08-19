@@ -4,11 +4,12 @@ import React from 'react';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 import { ContactItem, SocialIcon } from './ContactItem';
 import { UpworkIcon } from './ui/UpworkIcon';
+import { navItems } from '@/constants/navLinks';
+import { NavItem } from '@/types/index.interface';
 
 interface NavigationLinkProps {
   href: string;
   children: React.ReactNode;
-  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 interface NavigationLink {
@@ -17,11 +18,10 @@ interface NavigationLink {
 }
 
 // NavigationLink
-const NavigationLink: React.FC<NavigationLinkProps> = ({ href, children, onClick }) => {
+const NavigationLink: React.FC<NavigationLinkProps> = ({ href, children }) => {
   return (
     <a
       href={href}
-      onClick={onClick}
       className="hover:text-primary cursor-pointer text-gray-300 transition-colors duration-200"
     >
       {children}
@@ -32,13 +32,13 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({ href, children, onClick
 const Footer: React.FC = () => {
   const currentYear: number = new Date().getFullYear();
 
-  const navigationLinks: NavigationLink[] = [
-    { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
-    { href: '/works', label: 'Works' },
-    { href: '/testimonials', label: 'Testimonials' },
-    { href: '/contact', label: 'Contact us' },
-  ];
+  // const navItems: NavigationLink[] = [
+  //   { href: '/', label: 'Home' },
+  //   { href: '/services', label: 'Services' },
+  //   { href: '/works', label: 'Works' },
+  //   { href: '/testimonials', label: 'Testimonials' },
+  //   { href: '/contact', label: 'Contact us' },
+  // ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string): void => {
     e.preventDefault();
@@ -88,13 +88,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             {/* Navigation Links */}
             <nav className="flex flex-wrap gap-6 md:gap-8">
-              {navigationLinks.map((link: NavigationLink) => (
-                <NavigationLink
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleNavClick(e, link.href)}
-                >
-                  {link.label}
+              {navItems.map((link: NavItem) => (
+                <NavigationLink key={link.name} href={link.href}>
+                  {link.name}
                 </NavigationLink>
               ))}
             </nav>

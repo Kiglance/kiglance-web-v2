@@ -115,7 +115,10 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="dark:bg-background-2 bg-[#e2e1e1] px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="testimonials"
+      className="dark:bg-background-2 bg-[#e2e1e1] px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         <SectionHeader title="CLIENT FEEDBACK" subTitle=" What Our Clients Say" />
 

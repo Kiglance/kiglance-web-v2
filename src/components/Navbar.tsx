@@ -5,11 +5,8 @@ import Link from 'next/link';
 import Button from './ui/Button';
 import { usePathname } from 'next/navigation';
 import ToggleDarkMode from './ToggleDarkMode';
-
-interface NavItem {
-  name: string;
-  href: string;
-}
+import { navItems } from '@/constants/navLinks';
+import { NavItem } from '@/types/index.interface';
 
 interface NavbarProps {
   className?: string;
@@ -19,18 +16,72 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const pathname = usePathname();
-
-  const navItems: NavItem[] = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Works', href: '/works' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Contact us', href: '/contact' },
-  ];
+  const [activeSection, setActiveSection] = useState<string>('');
 
   const isActiveLink = (href: string): boolean => {
-    return pathname === href;
+    // For hash-based navigation on home page
+    if (href.startsWith('/#') && pathname === '/') {
+      const sectionId = href.substring(2); // Remove '/#'
+      return activeSection === sectionId;
+    }
+
+    // For regular page routes
+    if (!href.startsWith('/#')) {
+      return pathname === href;
+    }
+
+    // For hash links when not on home page
+    if (href.startsWith('/#') && pathname !== '/') {
+      return false;
+    }
+
+    return false;
   };
+
+  // Handle scroll effect and section detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 10);
+
+      // Only detect sections on home page
+      if (pathname === '/') {
+        // Get all sections that could be active
+        const sections = ['home', 'services', 'testimonials', 'contact'];
+        let currentSection = '';
+
+        // Check which section is currently in view
+        for (const sectionId of sections) {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top;
+            const elementHeight = rect.height;
+
+            // Consider section active if it's in the top half of viewport
+            if (
+              elementTop <= window.innerHeight / 2 &&
+              elementTop + elementHeight > window.innerHeight / 2
+            ) {
+              currentSection = sectionId;
+              break;
+            }
+          }
+        }
+
+        // If no section is detected but we're near the top, default to home
+        if (!currentSection && scrollTop < 100) {
+          currentSection = 'home';
+        }
+
+        setActiveSection(currentSection);
+      }
+    };
+
+    handleScroll(); // Run once on mount
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [pathname]);
 
   // Handle scroll effect
   useEffect(() => {
@@ -87,7 +138,10 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="text-neutral-1-light text-3xl font-bold dark:text-white">
+              <Link
+                href="/#home"
+                className="text-neutral-1-light text-3xl font-bold dark:text-white"
+              >
                 Kig<span className="text-primary">lance</span>
                 <span className="text-primary">{`/>`}</span>
               </Link>
