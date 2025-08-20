@@ -34,6 +34,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <div className="scroll-watcher"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="text-neutral-1-light dark:text-neutral-1 h-full w-full">
             <Navbar />

@@ -111,3 +111,22 @@ body {
     rgba(0, 0, 0, 0) 45%
   );
 }
+
+.scroll-watcher {
+  height: 4px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #25d366;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
