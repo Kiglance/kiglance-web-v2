@@ -47,7 +47,7 @@ const testimonialsData: Testimonial[] = [
     id: 4,
     quote:
       'Exceptional quality and outstanding customer service. Kiglance transformed our digital presence and helped us reach new heights in our industry.',
-    author: 'Michael Chen',
+    author: 'Jeffrey Willson',
     position: 'Founder',
     company: 'Nofri.',
   },
