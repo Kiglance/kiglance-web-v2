@@ -70,14 +70,17 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 <ContactItem icon={Mail} text="info@kiglance.com" type="email" />
-                <ContactItem icon={Phone} text="(001) 1231 3435" type="phone" />
+                <ContactItem icon={Phone} text="(+250) 789810670" type="phone" />
               </div>
 
               {/* Social Icons */}
               <div className="flex items-center gap-3">
-                <SocialIcon icon={UpworkIcon} href="https://upwork.com" />
+                <SocialIcon
+                  icon={UpworkIcon}
+                  href="https://www.upwork.com/agencies/1802386715619577856/"
+                />
                 {/* <SocialIcon icon={Linkedin} href="https://linkedin.com" /> */}
-                <SocialIcon icon={Github} href="https://github.com" />
+                <SocialIcon icon={Github} href="https://github.com/Kiglance" />
               </div>
             </div>
           </div>
@@ -97,7 +100,7 @@ const Footer: React.FC = () => {
 
             {/* Copyright */}
             <div className="text-neutral text-sm">
-              © {currentYear} Kiglance - All Right Reserved
+              © {currentYear} Kiglance - All Rights Reserved
             </div>
           </div>
         </div>

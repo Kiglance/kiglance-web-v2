@@ -133,13 +133,9 @@ const ContactSection: React.FC = () => {
             <div>
               <h3 className="mb-8 text-2xl font-bold text-white">Contact Information</h3>
               <div className="space-y-6">
-                <ContactItem
-                  icon={MapPin}
-                  text="123 Innovation Street, Tech Valley, CA 94043, USA"
-                  type="address"
-                />
+                <ContactItem icon={MapPin} text="1 KN 78 St, Norrsken, Kigali." type="address" />
                 <ContactItem icon={Mail} text="info@kiglance.com" type="email" />
-                <ContactItem icon={Phone} text="(+250) 780000000" type="phone" />
+                <ContactItem icon={Phone} text="(+250) 789810670" type="phone" />
               </div>
             </div>
 
@@ -147,9 +143,12 @@ const ContactSection: React.FC = () => {
             <div>
               <h3 className="mb-8 text-2xl font-bold text-white">Follow Us</h3>
               <div className="flex items-center gap-4">
-                <SocialIcon icon={UpworkIcon} href="https://upwork.com" />
+                <SocialIcon
+                  icon={UpworkIcon}
+                  href="https://www.upwork.com/agencies/1802386715619577856/"
+                />
                 {/* <SocialIcon icon={Linkedin} href="https://linkedin.com" /> */}
-                <SocialIcon icon={Github} href="https://github.com" />
+                <SocialIcon icon={Github} href="https://github.com/Kiglance" />
               </div>
             </div>
           </div>

@@ -23,25 +23,25 @@ const testimonialsData: Testimonial[] = [
   {
     id: 1,
     quote:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    author: 'Lora Smith',
-    position: 'Founding Partner',
+      'I am very much satisfied with the work. Everything was done efficiently and quickly. Masters of their work ;)',
+    author: 'Taras Klymchuk',
+    position: 'Founder',
+    company: 'Taras Solutions.',
   },
   {
     id: 2,
     quote:
-      'Working with Kiglance has been an absolute game-changer for our business. Their attention to detail and innovative solutions exceeded our expectations.',
-    author: 'James Wilson',
-    position: 'CEO',
-    company: 'TechStart Inc.',
+      "The team at Kiglance are as kind as they are smart. They're very hard workers and will go above and beyond to make sure that you're happy with their work",
+    author: 'Anthony Bibbs',
+    position: 'Founder & CEO',
+    company: 'Luminant AI.',
   },
   {
     id: 3,
-    quote:
-      'The team at Kiglance delivered a stunning website that perfectly captured our brand vision. Highly professional and creative approach throughout.',
-    author: 'Sarah Johnson',
-    position: 'Marketing Director',
-    company: 'Creative Agency',
+    quote: 'The Kiglance team did an excellent job!!',
+    author: 'John Davis',
+    position: 'Co-Founder & CTO',
+    company: 'PingPoint Labs.',
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const testimonialsData: Testimonial[] = [
       'Exceptional quality and outstanding customer service. Kiglance transformed our digital presence and helped us reach new heights in our industry.',
     author: 'Michael Chen',
     position: 'Founder',
-    company: 'Digital Solutions',
+    company: 'Nofri.',
   },
 ];
 
