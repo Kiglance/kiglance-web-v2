@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               {/* Social Icons */}
               <div className="flex items-center gap-3">
                 <SocialIcon icon={UpworkIcon} href="https://upwork.com" />
-                <SocialIcon icon={Linkedin} href="https://linkedin.com" />
+                {/* <SocialIcon icon={Linkedin} href="https://linkedin.com" /> */}
                 <SocialIcon icon={Github} href="https://github.com" />
               </div>
             </div>

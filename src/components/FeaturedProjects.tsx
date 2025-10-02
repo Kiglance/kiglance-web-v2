@@ -5,8 +5,10 @@ import ProjectCard from './ProjectCard';
 import Button from './ui/Button';
 import { SectionHeader } from './SectionHeader';
 import { projects } from '../../data/static';
+import { useRouter } from 'next/navigation';
 
 const FeaturedProjects = () => {
+  const router = useRouter();
   return (
     <section className="dark:bg-background 4xl:min-h-auto bg-background-light min-h-screen px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -20,6 +22,7 @@ const FeaturedProjects = () => {
         {/* View All Projects Button */}
         <div className="flex justify-center">
           <Button
+            onClick={() => router.push('/works')}
             variant="secondary"
             className="group flex items-center gap-3 px-8 py-4 font-medium transition-all duration-300"
           >

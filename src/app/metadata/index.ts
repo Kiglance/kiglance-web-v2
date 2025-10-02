@@ -83,7 +83,7 @@ export const jsonLdData = {
     },
     sameAs: [
       'https://upwork.com/kiglance',
-      'https://linkedin.com/company/kiglance',
+      // 'https://linkedin.com/company/kiglance',
       'https://github.com/kiglance',
     ],
   },

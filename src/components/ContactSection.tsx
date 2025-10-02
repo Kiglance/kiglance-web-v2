@@ -148,7 +148,7 @@ const ContactSection: React.FC = () => {
               <h3 className="mb-8 text-2xl font-bold text-white">Follow Us</h3>
               <div className="flex items-center gap-4">
                 <SocialIcon icon={UpworkIcon} href="https://upwork.com" />
-                <SocialIcon icon={Linkedin} href="https://linkedin.com" />
+                {/* <SocialIcon icon={Linkedin} href="https://linkedin.com" /> */}
                 <SocialIcon icon={Github} href="https://github.com" />
               </div>
             </div>
