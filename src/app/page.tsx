@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Kiglance - Professional Web Development & Digital Solutions',
   description:
     'Leading web development agency in Kigali, Rwanda. We create stunning websites, mobile apps, and digital solutions that drive business growth.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Home() {

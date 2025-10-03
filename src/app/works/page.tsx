@@ -4,8 +4,17 @@ import { SectionHeader } from '@/components/SectionHeader';
 import Button from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
 import { projects } from '../../../data/static';
-
 import CountContainer from '@/components/CountContainer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Works & Portfolio',
+  description:
+    'Explore our portfolio of results-driven digital solutions that combine thoughtful design with robust development.',
+  alternates: {
+    canonical: '/works',
+  },
+};
 
 const page = () => {
   return (
