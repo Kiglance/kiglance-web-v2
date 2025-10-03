@@ -3,8 +3,10 @@
 import React from 'react';
 import FloatingElements from './FloatingElements';
 import Button from './ui/Button';
+import { useRouter } from 'next/navigation';
 
 const HeroSection: React.FC = () => {
+  const router = useRouter();
   return (
     <div
       id="home"
@@ -41,7 +43,11 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Button */}
           <div className="mt-16">
-            <Button size="lg" className="px-10 py-4 text-lg">
+            <Button
+              size="lg"
+              className="px-10 py-4 text-lg"
+              onClick={() => router.push('/#contact')}
+            >
               Start Your Project
             </Button>
           </div>

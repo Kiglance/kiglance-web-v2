@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Button from './ui/Button';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import ToggleDarkMode from './ToggleDarkMode';
 import { navItems } from '@/constants/navLinks';
 import { NavItem } from '@/types/index.interface';
@@ -13,6 +13,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const pathname = usePathname();
@@ -169,7 +170,9 @@ const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             {/* Desktop Right */}
             <div className="hidden items-center space-x-4 lg:flex">
               <ToggleDarkMode />
-              <Button size="md">Get in touch</Button>
+              <Button size="md" onClick={() => router.push('/#contact')}>
+                Get in touch
+              </Button>
             </div>
 
             {/* Mobile menu button */}
