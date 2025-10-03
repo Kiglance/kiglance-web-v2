@@ -6,6 +6,23 @@ export const projects = [
       'A premium online shopping experience with advanced filtering and AI recommendations.',
     image: 'https://i.pinimg.com/736x/5d/e0/93/5de093ef89b1ccb4d72a41b9a88120e5.jpg',
     technologies: ['React.js', 'Node.js', 'Tailwind CSS'],
+    highlights: [
+      '8-Week Development Timeline',
+      '92% Faster Page Load Time',
+      '120% Increase In Online Sales',
+      '4.7/5 Rating From 2,845+ Reviews',
+    ],
+    services: [
+      'E-Commerce Development',
+      'UI/UX Design',
+      'AI Recommendation Engine',
+      'Payment Gateway Integration',
+      'Inventory Management System',
+    ],
+    projectOverview:
+      'LuxMarket E-Commerce represents a revolutionary approach to online luxury shopping. The platform was built from the ground up to provide users with an intuitive, fast, and personalized shopping experience. We implemented advanced AI algorithms that analyze user behavior, purchase history, and browsing patterns to deliver highly accurate product recommendations. The project involved creating a scalable architecture capable of handling thousands of concurrent users while maintaining sub-second page load times. Our team integrated a sophisticated filtering system that allows customers to narrow down products by multiple attributes simultaneously, including price range, brand, color, size, and customer ratings. The checkout process was streamlined to minimize cart abandonment, featuring one-click purchasing for returning customers and multiple payment options including digital wallets and buy-now-pay-later services. We also implemented a robust admin dashboard for inventory management, order tracking, and analytics, giving the business real-time insights into sales performance and customer behavior.',
+    clientName: 'LuxMarket Inc.',
+    duration: '8 Weeks',
   },
   {
     id: 2,
@@ -14,6 +31,23 @@ export const projects = [
       'A premium online shopping experience with advanced filtering and AI recommendations.',
     image: 'https://i.pinimg.com/1200x/53/7e/9c/537e9c22a28f9e0001b232055a1125a8.jpg',
     technologies: ['Next js', 'Node.js', 'Java'],
+    highlights: [
+      '12-Week Development Timeline',
+      '99.9% Uptime Guarantee',
+      '200% Increase In User Engagement',
+      '4.8/5 Rating From 5,120+ Users',
+    ],
+    services: [
+      'Mobile Banking Solutions',
+      'Security & Encryption',
+      'Financial Analytics Dashboard',
+      'API Integration',
+      'Cloud Infrastructure',
+    ],
+    projectOverview:
+      'FinTrack Banking App was developed to modernize personal finance management through cutting-edge technology and security protocols. This comprehensive banking solution provides users with real-time account monitoring, transaction tracking, and sophisticated budgeting tools. The application features biometric authentication, end-to-end encryption, and multi-factor authentication to ensure maximum security for sensitive financial data. We integrated machine learning algorithms that categorize transactions automatically, identify spending patterns, and provide personalized savings recommendations. The app includes features like bill payment scheduling, peer-to-peer money transfers, investment portfolio tracking, and credit score monitoring. Our development team worked closely with financial regulatory experts to ensure full compliance with banking standards and data protection regulations. The backend infrastructure was designed for scalability and reliability, utilizing microservices architecture and cloud-based solutions to handle millions of transactions securely and efficiently.',
+    clientName: 'FinTrack Financial Services',
+    duration: '3 Months',
   },
   {
     id: 3,
@@ -22,6 +56,23 @@ export const projects = [
       'A premium online shopping experience with advanced filtering and AI recommendations.',
     image: 'https://i.pinimg.com/1200x/75/78/81/757881df41ef534807b71f2093fb1f5d.jpg',
     technologies: ['Node.js', 'Angular', 'Nest js'],
+    highlights: [
+      '10-Week Development Timeline',
+      '95% Patient Satisfaction Rate',
+      '150% Increase In Appointment Bookings',
+      '4.6/5 Rating From 3,567+ Patients',
+    ],
+    services: [
+      'Healthcare Software Development',
+      'Telemedicine Integration',
+      'Patient Portal Design',
+      'HIPAA Compliance',
+      'Medical Records Management',
+    ],
+    projectOverview:
+      'MediCare Platform is a comprehensive healthcare management system designed to bridge the gap between patients and healthcare providers. The platform offers seamless appointment scheduling, telemedicine capabilities, electronic health records management, and prescription tracking all in one unified interface. We prioritized user experience by creating intuitive workflows for both patients and medical staff, reducing administrative burden and improving patient care quality. The system includes video consultation features with high-definition streaming, digital prescription generation, lab result sharing, and secure messaging between patients and doctors. Our development team ensured full HIPAA compliance, implementing robust data encryption, access controls, and audit logging. The platform integrates with existing hospital management systems and insurance providers for streamlined billing and claims processing. We also developed a mobile application that allows patients to access their health information, schedule appointments, and communicate with their healthcare team from anywhere.',
+    clientName: 'MediCare Health Systems',
+    duration: '10 Weeks',
   },
   {
     id: 4,
@@ -29,6 +80,23 @@ export const projects = [
     description: 'A comprehensive platform for online courses, quizzes, and student analytics.',
     image: 'https://i.pinimg.com/1200x/22/53/be/2253be578f71f75e501e177abe8267c1.jpg',
     technologies: ['Vue.js', 'Firebase', 'Sass'],
+    highlights: [
+      '6-Week Development Timeline',
+      '88% Course Completion Rate',
+      '180% Increase In Student Enrollment',
+      '4.5/5 Rating From 4,892+ Students',
+    ],
+    services: [
+      'Learning Management System',
+      'Interactive Course Design',
+      'Video Streaming Platform',
+      'Assessment & Grading Tools',
+      'Student Analytics',
+    ],
+    projectOverview:
+      'EduPro Learning Suite revolutionizes online education by providing an all-in-one platform for course creation, delivery, and management. The platform empowers educators to create engaging multimedia courses with video lectures, interactive quizzes, assignments, and discussion forums. We implemented adaptive learning algorithms that personalize the learning experience based on individual student performance and learning pace. The system tracks student progress in real-time, providing detailed analytics to both instructors and learners. Features include live virtual classrooms, breakout rooms for group discussions, screen sharing, and interactive whiteboards. The platform supports multiple content formats including SCORM-compliant materials, ensuring compatibility with existing educational resources. We built a robust gradebook system with automated grading for objective assessments and intuitive tools for subjective evaluations. The mobile-responsive design ensures students can access their courses from any device, with offline viewing capabilities for downloaded content.',
+    clientName: 'EduPro Learning Academy',
+    duration: '6 Weeks',
   },
   {
     id: 5,
@@ -36,6 +104,23 @@ export const projects = [
     description: 'A seamless travel booking app with real-time availability and smart suggestions.',
     image: 'https://i.pinimg.com/1200x/a5/4b/d6/a54bd61da0a92148d286dc784e4d99be.jpg',
     technologies: ['React Native', 'Express.js', 'MongoDB'],
+    highlights: [
+      '9-Week Development Timeline',
+      '94% Booking Success Rate',
+      '165% Increase In Mobile Bookings',
+      '4.7/5 Rating From 6,234+ Travelers',
+    ],
+    services: [
+      'Travel Booking Platform',
+      'Real-Time Availability API',
+      'Payment Processing',
+      'Itinerary Management',
+      'AI Travel Recommendations',
+    ],
+    projectOverview:
+      'TravelMate Booking is a comprehensive travel companion that simplifies the entire journey planning process. The platform aggregates flights, hotels, car rentals, and activities from multiple providers, allowing users to compare prices and book everything in one place. We developed smart recommendation algorithms that suggest personalized travel destinations based on user preferences, budget, past trips, and trending locations. The app features real-time price alerts, flexible date searches, and interactive maps to help travelers find the best deals. Users can create and share detailed itineraries, collaborate with travel companions, and access offline trip information. We integrated secure payment processing with support for multiple currencies and payment methods. The platform includes travel insurance options, visa requirement information, and weather forecasts for destinations. Our team implemented a loyalty rewards program that allows users to earn points on bookings and redeem them for discounts on future trips.',
+    clientName: 'TravelMate Global',
+    duration: '2 Months',
   },
   {
     id: 6,
@@ -43,6 +128,23 @@ export const projects = [
     description: 'A health and fitness dashboard with personalized workout and nutrition plans.',
     image: 'https://i.pinimg.com/736x/9c/3c/0a/9c3c0ad0f271a672267fd23558e2f0fd.jpg',
     technologies: ['Flutter', 'Dart', 'Firebase'],
+    highlights: [
+      '7-Week Development Timeline',
+      '91% User Retention Rate',
+      '140% Increase In Workout Completions',
+      '4.6/5 Rating From 3,921+ Users',
+    ],
+    services: [
+      'Fitness App Development',
+      'Wearable Device Integration',
+      'Nutrition Tracking',
+      'AI Workout Planning',
+      'Social Fitness Features',
+    ],
+    projectOverview:
+      'FitTrack Health Dashboard is a holistic fitness and wellness platform that empowers users to achieve their health goals through personalized plans and comprehensive tracking. The application integrates with popular wearable devices and fitness trackers to automatically sync workout data, heart rate, sleep patterns, and daily activity metrics. We developed AI-powered workout generators that create customized exercise routines based on fitness level, available equipment, time constraints, and personal goals. The nutrition module features a vast food database with barcode scanning, meal planning tools, and macro tracking capabilities. Users can set goals for weight loss, muscle gain, or general fitness, and the app provides progress tracking with detailed charts and insights. The platform includes a social component where users can join challenges, share achievements, and connect with workout buddies for motivation. We implemented video demonstrations for exercises, form correction tips, and integration with YouTube for guided workout sessions.',
+    clientName: 'FitTrack Wellness Corp',
+    duration: '7 Weeks',
   },
   {
     id: 7,
@@ -50,6 +152,23 @@ export const projects = [
     description: 'A centralized dashboard for managing IoT devices and home automation.',
     image: 'https://i.pinimg.com/1200x/38/b5/1e/38b51ecfd20ac6957120328542ad3103.jpg',
     technologies: ['React.js', 'Redux', 'Socket.io'],
+    highlights: [
+      '11-Week Development Timeline',
+      '97% Device Compatibility',
+      '175% Increase In Energy Efficiency',
+      '4.8/5 Rating From 2,456+ Homeowners',
+    ],
+    services: [
+      'IoT Platform Development',
+      'Smart Home Integration',
+      'Real-Time Monitoring',
+      'Automation Rules Engine',
+      'Voice Control Integration',
+    ],
+    projectOverview:
+      'SmartHome Control Center provides a unified interface for managing all smart home devices regardless of manufacturer or protocol. The platform supports hundreds of IoT devices including smart lights, thermostats, security cameras, door locks, appliances, and entertainment systems. We developed a powerful automation engine that allows users to create complex rules and scenarios based on triggers like time, device status, location, or sensor data. The dashboard provides real-time monitoring of all connected devices with energy consumption tracking and historical data analysis. Users can create custom scenes that control multiple devices simultaneously with a single command. We integrated voice control through popular assistants like Alexa and Google Assistant, enabling hands-free operation. The security features include end-to-end encryption, two-factor authentication, and activity logging to ensure privacy and prevent unauthorized access. The mobile app allows remote control from anywhere, with push notifications for security alerts and device status changes.',
+    clientName: 'SmartHome Technologies',
+    duration: '11 Weeks',
   },
   {
     id: 8,
@@ -57,6 +176,23 @@ export const projects = [
     description: 'A modern event ticketing platform with QR code check-in and analytics.',
     image: 'https://i.pinimg.com/1200x/50/ec/6f/50ec6f334faed1e78042c6f522502878.jpg',
     technologies: ['Angular', 'Node.js', 'PostgreSQL'],
+    highlights: [
+      '8-Week Development Timeline',
+      '93% Faster Check-In Process',
+      '210% Increase In Ticket Sales',
+      '4.7/5 Rating From 8,765+ Event Attendees',
+    ],
+    services: [
+      'Event Management Platform',
+      'Ticketing System',
+      'QR Code Technology',
+      'Payment Processing',
+      'Analytics Dashboard',
+    ],
+    projectOverview:
+      'EventEase Ticketing is a full-featured event management and ticketing platform designed for organizers of all sizes, from small community gatherings to large-scale conferences and concerts. The platform handles the entire event lifecycle including event creation, ticket sales, attendee management, and post-event analytics. We developed a flexible ticketing system that supports multiple ticket types, early bird pricing, group discounts, promo codes, and dynamic pricing based on demand. The QR code check-in system enables rapid entry processing with offline capability, ensuring smooth operations even with poor internet connectivity. Event organizers get access to a comprehensive dashboard showing real-time sales data, attendee demographics, revenue projections, and marketing performance. We integrated email marketing tools for automated confirmations, reminders, and post-event surveys. The platform supports seating charts for assigned seating events, waitlist management, and resale prevention measures to combat ticket scalping.',
+    clientName: 'EventEase Productions',
+    duration: '2 Months',
   },
   {
     id: 9,
@@ -64,6 +200,23 @@ export const projects = [
     description: 'A social platform for sharing and discovering recipes with step-by-step guides.',
     image: 'https://i.pinimg.com/736x/04/4f/d4/044fd469827348415de6fb2b860d54e6.jpg',
     technologies: ['Vue.js', 'Firebase', 'TypeScript'],
+    highlights: [
+      '6-Week Development Timeline',
+      '89% User Engagement Rate',
+      '195% Increase In Recipe Submissions',
+      '4.5/5 Rating From 5,678+ Home Cooks',
+    ],
+    services: [
+      'Social Platform Development',
+      'Content Management System',
+      'Image Optimization',
+      'Search & Discovery Engine',
+      'Community Features',
+    ],
+    projectOverview:
+      'RecipeShare Community is a vibrant social platform where food enthusiasts can discover, share, and perfect recipes. The platform features an intuitive recipe creation tool that guides users through adding ingredients, step-by-step instructions, cooking times, difficulty levels, and dietary information. We implemented advanced search and filtering capabilities that allow users to find recipes based on ingredients they have, dietary restrictions, cuisine type, cooking method, and preparation time. The platform includes a smart meal planning feature that generates weekly meal plans based on preferences and automatically creates shopping lists. Users can save favorite recipes to personal cookbooks, rate and review recipes, and follow their favorite contributors. We developed a community aspect with cooking challenges, seasonal recipe collections, and expert chef collaborations. The platform uses machine learning to recommend recipes based on user preferences and browsing history. Photo upload and optimization tools help users showcase their culinary creations beautifully.',
+    clientName: 'RecipeShare Network',
+    duration: '1.5 Months',
   },
   {
     id: 10,
@@ -71,5 +224,22 @@ export const projects = [
     description: 'A drag-and-drop tool for creating professional portfolios and resumes.',
     image: 'https://i.pinimg.com/1200x/73/f8/c5/73f8c588d3b5ca51a0ee6cba9a977f58.jpg',
     technologies: ['Next.js', 'Chakra UI', 'MongoDB'],
+    highlights: [
+      '5-Week Development Timeline',
+      '96% Template Satisfaction Rate',
+      '225% Increase In Portfolio Creations',
+      '4.9/5 Rating From 7,234+ Professionals',
+    ],
+    services: [
+      'Portfolio Platform Development',
+      'Drag-and-Drop Builder',
+      'Template Design',
+      'Custom Domain Integration',
+      'SEO Optimization',
+    ],
+    projectOverview:
+      'Portfolio Builder empowers professionals, freelancers, and creatives to build stunning online portfolios without any coding knowledge. The platform features an intuitive drag-and-drop interface with a rich library of professionally designed templates tailored for various industries including design, photography, development, writing, and consulting. Users can customize every aspect of their portfolio including colors, fonts, layouts, and animations. We developed a smart content organization system that helps users structure their work effectively with project galleries, case studies, testimonials, and about sections. The platform includes built-in SEO optimization tools, ensuring portfolios rank well in search engines. Users can connect custom domains, integrate Google Analytics, and add contact forms with email notifications. We implemented version history and preview modes so users can experiment with designs without affecting their live portfolio. The platform also includes resume building tools with ATS-friendly templates and PDF export functionality for job applications.',
+    clientName: 'Portfolio Builder Co.',
+    duration: '5 Weeks',
   },
 ];

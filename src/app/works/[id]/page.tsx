@@ -1,39 +1,45 @@
+'use client';
+
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import { SectionHeader } from '@/components/SectionHeader';
 import Button from '@/components/ui/Button';
 import { CheckCircle, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import React from 'react';
+import { projects } from '../../../../data/static';
 
 const page = () => {
-  const highlights = [
-    '6-Week Development Timeline',
-    '90% Faster Page Load Time',
-    '85% Increase In Online Inquiries',
-    '4.4/5 Rating From 1,351+ Google Reviews',
-  ];
+  const { id } = useParams();
+  const project = projects.find((proj) => proj.id === Number(id));
 
-  const services = [
-    'Web design & UI',
-    'Social media visuals',
-    'Infographics',
-    'AI Integrations',
-    'Mobile App Development',
-  ];
+  if (!project) {
+    return (
+      <div className="bg-background-light dark:bg-background flex min-h-screen items-center justify-center">
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Project not found</h1>
+      </div>
+    );
+  }
 
-  const techStack = ['React js', 'Node js', 'Tailwind CSS'];
+  const {
+    title,
+    description,
+    image,
+    technologies,
+    highlights,
+    services,
+    projectOverview,
+    clientName,
+    duration,
+  } = project;
+
   return (
     <div>
       {/* Banner section */}
       <div className="relative">
         {/* Background Image */}
-        <Image
-          src="https://i.pinimg.com/1200x/73/f8/c5/73f8c588d3b5ca51a0ee6cba9a977f58.jpg"
-          alt="project-name"
-          fill
-          className="h-full w-full object-cover"
-        />
+        <Image src={image} alt="project-name" fill className="h-full w-full object-cover" />
 
         {/* Overlay  */}
         <div className="absolute inset-0 z-10 bg-black/85"></div>
@@ -41,10 +47,9 @@ const page = () => {
         {/* Content */}
         <div className="relative z-20 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center space-y-3 text-center">
-            <h1 className="text-4xl font-bold text-white md:text-5xl">Project Name goes here...</h1>
+            <h1 className="text-4xl font-bold text-white md:text-5xl">{title}</h1>
             <p className="text-neutral mx-auto mt-2 max-w-3xl px-4 text-sm leading-relaxed sm:text-base lg:text-lg">
-              Explore our portfolio of results-driven digital solutions that combine thoughtful
-              design with robust development.
+              {description}
             </p>
 
             <Button variant="secondary" className="group/action-1 flex items-center gap-1">
@@ -70,19 +75,12 @@ const page = () => {
                   Project Overview
                 </h1>
                 <p className="text-neutral-1-light mb-8 text-sm leading-relaxed lg:text-base dark:text-white">
-                  {`Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem
-                  Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, When An
-                  Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type Specimen
-                  Book. It Has Survived Not Only Five Centuries, But Also The Leap Into Electronic
-                  Typesetting, Remaining Essentially Unchanged. It Was Popularised In The 1960s With
-                  The Release Of Letraset Sheets Containing Lorem Ipsum Passages, And More Recently
-                  With Desktop Publishing Software Like Aldus PageMaker Including Versions Of Lorem
-                  Ipsum.`}
+                  {projectOverview}
                 </p>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-3">
-                  {techStack.map((tech, index) => (
+                  {technologies.map((tech, index) => (
                     <span
                       key={index}
                       className="rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-white"
@@ -98,7 +96,7 @@ const page = () => {
                 <h2 className="text-neutral-1-light mb-4 text-2xl font-bold lg:text-3xl dark:text-white">
                   Client
                 </h2>
-                <p className="text-neutral-1-light text-lg dark:text-white">Paul & Darko, Nexgen</p>
+                <p className="text-neutral-1-light text-lg dark:text-white">{clientName}</p>
               </div>
 
               {/* Duration */}
@@ -106,7 +104,7 @@ const page = () => {
                 <h2 className="text-neutral-1-light mb-4 text-2xl font-bold lg:text-3xl dark:text-white">
                   Duration
                 </h2>
-                <p className="text-neutral-1-light text-lg dark:text-white">1 Month</p>
+                <p className="text-neutral-1-light text-lg dark:text-white">{duration}</p>
               </div>
             </div>
 

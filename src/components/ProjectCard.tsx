@@ -7,16 +7,20 @@ import Button from './ui/Button';
 import { useRouter } from 'next/navigation';
 
 interface ProjectCardProps {
+  id: number;
   title: string;
   description: string;
   image: string;
   technologies: string[];
 }
 
-const ProjectCard = ({ title, description, image, technologies }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, description, image, technologies }: ProjectCardProps) => {
   const route = useRouter();
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:scale-105 hover:transform dark:bg-[#2D2D2D]">
+    <div
+      onClick={() => route.push(`/works/${id}`)}
+      className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:scale-105 hover:transform dark:bg-[#2D2D2D]"
+    >
       {/* Project Image */}
       <div className="relative h-64 w-full overflow-hidden">
         <Image src={image} alt="featured-project" fill className="absolute inset-0 object-cover" />
