@@ -6,13 +6,11 @@ import { SectionHeader } from '@/components/SectionHeader';
 import Button from '@/components/ui/Button';
 import { CheckCircle, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import React from 'react';
 import { projects } from '../../../../data/static';
 
-const ProjectClientPage = () => {
-  const { id } = useParams();
-  const project = projects.find((proj) => proj.id === Number(id));
+const ProjectClientPage = ({ projectId }: { projectId: string }) => {
+  const project = projects.find((proj) => proj.id === Number(projectId));
 
   if (!project) {
     return (

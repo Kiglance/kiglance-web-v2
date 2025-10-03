@@ -2,10 +2,14 @@ import { Metadata } from 'next';
 import ProjectClientPage from './projectClientPage';
 import { projects } from '../../../../data/static';
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const projectId = params.id;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
 
-  const project = projects.find((proj) => proj.id === Number(projectId));
+  const project = projects.find((proj) => proj.id === Number(id));
 
   if (!project) {
     return {
@@ -33,8 +37,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-const page = () => {
-  return <ProjectClientPage />;
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  return <ProjectClientPage projectId={id} />;
 };
 
 export default page;
