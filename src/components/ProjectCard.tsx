@@ -10,8 +10,8 @@ interface ProjectCardProps {
   id: number;
   title: string;
   description: string;
-  image: string;
-  technologies: string[];
+  image: any;
+  technologies?: string[];
 }
 
 const ProjectCard = ({ id, title, description, image, technologies }: ProjectCardProps) => {
@@ -52,18 +52,6 @@ const ProjectCard = ({ id, title, description, image, technologies }: ProjectCar
       <div className="p-6">
         <h3 className="text-neutral-1-light mb-3 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-neutral mb-6 text-sm leading-relaxed">{description}</p>
-
-        {/* Technologies */}
-        <div className="flex w-full gap-2 overflow-y-auto">
-          {technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="rounded-full border border-gray-700 bg-gray-800 px-3 py-1 text-xs font-medium text-gray-300"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
     </div>
   );

@@ -13,12 +13,12 @@ const CountContainer = () => {
   const infoStatics: InfoStatics[] = [
     {
       label: 'Projects Completed',
-      value: 20,
+      value: 15,
       type: 'number',
     },
     {
       label: 'Years Experience',
-      value: 8,
+      value: 4,
       type: 'number',
     },
     {
@@ -27,7 +27,7 @@ const CountContainer = () => {
       type: 'percentage',
     },
     {
-      label: 'Expert Developer',
+      label: 'Expert Developers',
       value: 5,
       type: 'number',
     },

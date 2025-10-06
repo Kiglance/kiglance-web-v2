@@ -20,17 +20,8 @@ const ProjectClientPage = ({ projectId }: { projectId: string }) => {
     );
   }
 
-  const {
-    title,
-    description,
-    image,
-    technologies,
-    highlights,
-    services,
-    projectOverview,
-    clientName,
-    duration,
-  } = project;
+  const { title, description, image, highlights, services, projectOverview, clientName, duration } =
+    project;
   return (
     <div>
       {/* Banner section */}
@@ -74,18 +65,6 @@ const ProjectClientPage = ({ projectId }: { projectId: string }) => {
                 <p className="text-neutral-1-light mb-8 text-sm leading-relaxed lg:text-base dark:text-white">
                   {projectOverview}
                 </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3">
-                  {technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-white"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Client */}
