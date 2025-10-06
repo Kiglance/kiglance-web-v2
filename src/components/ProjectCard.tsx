@@ -12,9 +12,17 @@ interface ProjectCardProps {
   description: string;
   image: any;
   technologies?: string[];
+  website?: string;
 }
 
-const ProjectCard = ({ id, title, description, image, technologies }: ProjectCardProps) => {
+const ProjectCard = ({
+  id,
+  title,
+  description,
+  image,
+  technologies,
+  website,
+}: ProjectCardProps) => {
   const route = useRouter();
   return (
     <div
@@ -27,7 +35,13 @@ const ProjectCard = ({ id, title, description, image, technologies }: ProjectCar
 
         {/* Action Buttons - Show on Hover */}
         <div className="inset-0 hidden flex-col items-center justify-center gap-4 bg-[#090909] opacity-90 transition-all duration-300 group-hover:absolute group-hover:flex">
-          <Button variant="secondary" className="group/action-1 flex items-center gap-1">
+          <Button
+            onClick={() => {
+              window.open(website, '_blank');
+            }}
+            variant="secondary"
+            className="group/action-1 flex items-center gap-1"
+          >
             Live Website
             <ExternalLink
               size={16}

@@ -12,7 +12,7 @@ const CTASection = () => {
     router.push('/#contact');
   };
   return (
-    <div className="flex items-center justify-center bg-gray-800 p-8">
+    <div className="flex items-center justify-center bg-gray-800 p-8 py-20">
       <div className="mx-auto max-w-4xl text-center">
         {/* Main Heading */}
         <h1 className="mb-8 text-4xl leading-14 font-semibold text-white lg:text-6xl">
