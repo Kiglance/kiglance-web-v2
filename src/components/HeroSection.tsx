@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
               We increase revenue and ensure sustainable long-term growth
             </p>
             <p className="text-neutral mt-2 text-base leading-relaxed sm:text-lg">
-              for your business through powerful Webflow websites.
+              for your business through powerful, state-of-the-art websites and systems.
             </p>
           </div>
 
