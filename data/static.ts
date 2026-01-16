@@ -75,31 +75,6 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'ASEF Rwanda',
-    description:
-      'ASEF is a non-profit organization based in the United States of America that has been providing scholarships to vulnerable yet bright secondary school students in Rwanda.',
-    image: '/asef.png',
-    highlights: [
-      '4-Week Implementation',
-      'Fully Responsive & SEO-Optimized Design',
-      'CMS-Driven Content Management',
-      'Improved Visitor Engagement and Session Duration',
-    ],
-    services: [
-      'Website Design (Web & Mobile)',
-      'Frontend Development',
-      'CMS Integration (Payload CMS)',
-      'Performance Optimization & Deployment',
-      'Training & Handover',
-    ],
-    projectOverview:
-      'ASEF Rwanda partnered to redesign and develop their official website with a focus on accessibility, storytelling, and long-term maintainability. The goal was to create a platform that highlights ASEF’s initiatives, showcases success stories of supported students, and allows donors and partners to easily learn about and engage with the foundation’s work.',
-    clientName: 'ASEF Rwanda',
-    duration: '4 Weeks',
-    website: 'https://www.asefrwanda.org/',
-  },
-  {
-    id: 5,
     title: 'MedStem',
     description:
       'A clinical platform that centralizes medical appointments and patient case tracking for healthcare institutions.',
@@ -124,7 +99,7 @@ export const projects = [
     website: 'https://med-stem.onrender.com/',
   },
   {
-    id: 6,
+    id: 5,
     title: 'MEP Erictric',
     description:
       'An online presence and service portal for MEP Erictric Tech, showcasing company services, project portfolios, and contact workflows for technical installations.',
