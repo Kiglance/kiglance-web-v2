@@ -1,0 +1,74 @@
+'use client';
+
+import React from 'react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import Button from './ui/Button';
+import { useRouter } from 'next/navigation';
+
+interface ProjectCardProps {
+  id: number;
+  title: string;
+  description: string;
+  image: any;
+  technologies?: string[];
+  website?: string;
+}
+
+const ProjectCard = ({
+  id,
+  title,
+  description,
+  image,
+  technologies,
+  website,
+}: ProjectCardProps) => {
+  const route = useRouter();
+  return (
+    <div
+      onClick={() => route.push(`/works/${id}`)}
+      className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:scale-105 hover:transform dark:bg-[#2D2D2D]"
+    >
+      {/* Project Image */}
+      <div className="relative h-64 w-full overflow-hidden">
+        <Image src={image} alt="featured-project" fill className="absolute inset-0 object-cover" />
+
+        {/* Action Buttons - Show on Hover */}
+        <div className="inset-0 hidden flex-col items-center justify-center gap-4 bg-[#090909] opacity-90 transition-all duration-300 group-hover:absolute group-hover:flex">
+          <Button
+            onClick={() => {
+              window.open(website, '_blank');
+            }}
+            variant="secondary"
+            className="group/action-1 flex items-center gap-1"
+          >
+            Live Website
+            <ExternalLink
+              size={16}
+              className="transition-transform duration-200 group-hover/action-1:translate-x-1"
+            />
+          </Button>
+
+          <Button
+            onClick={() => route.push(`/works/${title}`)}
+            className="group/action-2 flex items-center gap-1"
+          >
+            Read case Study
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-200 group-hover/action-2:translate-x-1"
+            />
+          </Button>
+        </div>
+      </div>
+
+      {/* Project Content */}
+      <div className="p-6">
+        <h3 className="text-neutral-1-light mb-3 text-xl font-bold dark:text-white">{title}</h3>
+        <p className="text-neutral mb-6 text-sm leading-relaxed">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

@@ -1,0 +1,132 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Colors */
+  --color-primary: #25d366;
+  --color-background: #000;
+  --color-background-1: #111204;
+  --color-background-2: #1e1e1e;
+  --color-neutral: #a6a6a6;
+  --color-neutral-1: #272727;
+  --color-neutral-2: #404040;
+
+  /* Light Mode */
+  --color-background-light: #f9fafb;
+  --color-neutral-1-light: #111827;
+
+  /* Breakpoints */
+  --breakpoint-xxs: 320px;
+  --breakpoint-xss: 400px;
+  --breakpoint-xs: 440px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-2xl: 1280px;
+  --breakpoint-3xl: 1400px;
+  --breakpoint-4xl: 2560px;
+
+  /* Font Sizes */
+  --font-size-tiny: 0.625rem;
+  --font-size-tiny--line-height: 1rem;
+
+  --font-size-xxs: 0.6875rem;
+  --font-size-xxs--line-height: 1.125rem;
+
+  --font-size-xs: 0.75rem;
+  --font-size-xs--line-height: 1.125rem;
+
+  --font-size-xs-plus: 0.8125rem;
+  --font-size-xs-plus--line-height: 1.1875rem;
+
+  --font-size-sm: 0.875rem;
+  --font-size-sm--line-height: 1.25rem;
+
+  --font-size-sm-plus: 0.9375rem;
+  --font-size-sm-plus--line-height: 1.3125rem;
+
+  --font-size-base: 1rem;
+  --font-size-base--line-height: 1.5rem;
+
+  --font-size-base-plus: 1.0625rem;
+  --font-size-base-plus--line-height: 1.5625rem;
+
+  --font-size-lg: 1.125rem;
+  --font-size-lg--line-height: 1.75rem;
+
+  --font-size-lg-plus: 1.1875rem;
+  --font-size-lg-plus--line-height: 1.8125rem;
+
+  --font-size-xl: 1.25rem;
+  --font-size-xl--line-height: 2rem;
+
+  --font-size-xl-plus: 1.3125rem;
+  --font-size-xl-plus--line-height: 1.9375rem;
+
+  --font-size-2xl-plus: 1.375rem;
+  --font-size-2xl-plus--line-height: 2.125rem;
+
+  --font-size-2xl: 1.5rem;
+  --font-size-2xl--line-height: 2.25rem;
+
+  --font-size-3xl: 1.875rem;
+  --font-size-3xl--line-height: 2.5rem;
+
+  --font-size-3xl-plus: 1.75rem;
+  --font-size-3xl-plus--line-height: 2.5rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-radial {
+  background: radial-gradient(
+    circle,
+    rgba(37, 211, 102, 0.3) 0%,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0) 45%
+  );
+}
+
+.scroll-watcher {
+  height: 4px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #25d366;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
